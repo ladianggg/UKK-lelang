@@ -1,6 +1,6 @@
 <?php
 include "../../conf/conn.php";
-$id = $_GET['id'];
+$id = $_GET['id_barang'];
 $query = ("DELETE FROM barang WHERE id_barang ='$id'");
 if(!mysqli_query($koneksi, "$query")){
 die(mysqli_error($koneksi));

@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // SQL query to insert user into the database
     $query = "INSERT INTO petugas (nama_petugas, username, password, level) VALUES ('$nama_petugas', '$username', '$password', '$level')";
-    echo $query;
+    // echo $query;
     // Execute the query
     if (mysqli_query($koneksi, $query)) {
         echo '<script>alert("Registration successful! Please log in.");
