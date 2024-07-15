@@ -18,7 +18,7 @@
         <div class="box box-primary">
           <div class="box-header">
             <a href="index.php?page=tambah_petugas" class="btn btn-primary" role="button" title="Tambah Data"><i class="glyphicon glyphicon-plus"></i> Tambah</a>
-            <a href="pages/petugas/report.php" class="btn btn-info" role="button" title="Generate PDF"><i class="glyphicon glyphicon-file"></i> Print PDF</a>
+            <a href="pages/report.php" class="btn btn-info" role="button" title="Generate PDF"><i class="glyphicon glyphicon-file"></i> Print PDF</a>
           </div>
           <div class="box-body table-responsive">
             <table id="petugas" class="table table-bordered table-hover">
