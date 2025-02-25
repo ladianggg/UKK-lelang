@@ -1,34 +1,6 @@
 <?php
-// session_start();
-// include "conf/conn.php";
-// $level = 'petugas';
-// $style_data_petugas = "";
-// if ($level !="administrator") 
-// echo '<script>alert("Anda Harus Login Terlebih Dahulu !!!");
-// window.location.href="pages/login.php"</script>';
-// $style_data_petugas = 'style= "display:none"';
-
-// $style_data_lelang="";
-// if ($level != "petugas")
-// $style_data_lelang= 'style ="display:none"';
-
-// $style_data_history="";
-// if($level == "pengguna")
-// $style_data_history ='style = "dispaly:none"';
-// // if (isset($_SESSION['id_user']) == 0) {
-// //   echo '<script>alert("Anda Harus Login Terlebih Dahulu !!!");
-// //   window.location.href="pages/login.php"</script>';
-// // } else {
-  include "conf/conn.php";
-  include "conf/session.php";
-  if (!isset($_SESSION['id_petugas']) && !isset($_SESSION['id_user'])) {
-    echo '<script>alert("Anda Harus Login Terlebih Dahulu !!!");
-    window.location.href="pages/login.php"</script>';
-  } else 
-  {
- $admin = $_SESSION["level"] == 'administrator';
- $petugas = $_SESSION["level"] == 'petugas';
- $masya = $_SESSION["level"] == 'masyarakat';
+session_start();
+include "conf/conn.php";
 ?>
   
 
@@ -85,7 +57,7 @@
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>A</b>LT</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Lelang</b>Vohisma5</span>
+      <span class="logo-lg"><b></b></span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -99,15 +71,15 @@
 
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="dist/img/.jjenopg" class="user-image" alt="User Image">
-              <span class="hidden-xs">Lee Jeno</span>
+              <img src="dist/img/avatar.png" class="user-image" alt="User Image">
+              <span class="hidden-xs">alex</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="dist/img/jeno.jpg" class="img-circle" alt="User Image">
+                <img src="dist/img/avatar.png" class="img-circle" alt="User Image">
 
-                <p>Lee jeno - singer rapper dancer
+                <p>alex- singer rapper dancer
                   <small>Member since Nov. 2012</small>
                 </p>
               </li>
@@ -152,10 +124,10 @@
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="dist/img/jeno.jpg" class="img-circle" alt="User Image">
+          <img src="dist/img/avatar.png" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Lee Jeno</p>
+          <p>alex</p>
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
@@ -170,41 +142,7 @@
         <li><a href="index.php"><i class="glyphicon glyphicon-home"></i> <span>Beranda</span></a></li>
         </li>
         <li class="treeview">
-          <a href="#">
-            <i class="glyphicon glyphicon-briefcase"></i> <span>Kelola Data</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-              </span>
-        </a>
-      <?php
-          if($admin){?>
-          <ul class="treeview-menu">
-            <li><a href="index.php?page=data_petugas"><i class="glyphicon glyphicon-education"></i> <span>Data Petugas</span></a></li>
-          </ul>
-          <ul class="treeview-menu">
-            <li><a href="index.php?page=data_barang"><i class="glyphicon glyphicon-education"></i> <span>Data Barang</span></a></li>
-          </ul>
-          <?php } ?> 
-          
-          <?php 
-          if($petugas){?>
-          <ul class="treeview-menu">
-            <li><a href="index.php?page=data_masyarakat"><i class="glyphicon glyphicon-education"></i> <span>Data Masyarakat</span></a></li>
-          </ul>
-          <ul class="treeview-menu">
-            <li ><a href="index.php?page=data_lelang"><i class="glyphicon glyphicon-education"></i> <span>Data Lelang</span></a></li>
-          </ul>
-          <ul class="treeview-menu">
-            <li><a href="index.php?page=data_history_lelang"><i class="glyphicon glyphicon-education"></i> <span>Data History Lelang</span></a></li>
-          </ul>
-          <?php } ?>  
 
-          <?php 
-          if($masya){?>
-          <ul class="treeview-menu">
-            <li><a href="index.php?page=menu_lelang"><i class="glyphicon glyphicon-education"></i> <span>Menu Lelang</span></a></li>
-          </ul>
-          <?php } ?>  
         
         </li>
       <li class="header">SETTING</li>
@@ -283,4 +221,4 @@
 </body>
 </html>
 
-<?php }  ?>
+<?php   ?>
